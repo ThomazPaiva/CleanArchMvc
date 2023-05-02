@@ -33,11 +33,11 @@ namespace CleanArchMvcDomain.Entities
 
         private void ValidateDomain(string name, string description, decimal price, int stock, string image)
         {
-            DomainExceptionValidation.When(string.IsNullOrEmpty(name), "Invalida name. Name is required");
+            DomainExceptionValidation.When(string.IsNullOrEmpty(name), "Invalid name. Name is required");
 
             DomainExceptionValidation.When(name.Length < 3, "Invalid Name. Minimum 3 characters");
 
-            DomainExceptionValidation.When(string.IsNullOrEmpty(description), "Invalida description. description is required");
+            DomainExceptionValidation.When(string.IsNullOrEmpty(description), "Invalid description. Description is required");
 
             DomainExceptionValidation.When(description.Length < 5, "Invalid description. Minimum 5 characters");
 
